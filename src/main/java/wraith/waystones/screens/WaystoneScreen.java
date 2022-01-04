@@ -322,6 +322,7 @@ public class WaystoneScreen extends UniversalWaystoneScreen {
     public void render(MatrixStack matrices, int mouseX, int mouseY, float delta) {
         super.render(matrices, mouseX, mouseY, delta);
         this.drawMouseoverTooltip(matrices, mouseX, mouseY);
+        renderButtonTooltips(matrices, mouseX, mouseY);
     }
 
     @Override
@@ -396,7 +397,6 @@ public class WaystoneScreen extends UniversalWaystoneScreen {
             if (this.nameField.isVisible()) {
                 this.nameField.render(matrices, mouseX, mouseY, delta);
             }
-            renderButtonTooltips(matrices, mouseX, mouseY);
         }
     }
 

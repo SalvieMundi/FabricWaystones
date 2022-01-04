@@ -140,7 +140,6 @@ public class UniversalWaystoneScreen extends HandledScreen<ScreenHandler> {
         this.renderWaystoneNames(matrices, this.x + 36, this.y + 40, n);
         this.renderWaystoneAmount(matrices, this.x + 10, this.y + 160);
         this.searchField.render(matrices, mouseX, mouseY, delta);
-        this.renderButtonTooltips(matrices, mouseX, mouseY);
     }
 
     protected void renderButtonTooltips(MatrixStack matrices, int mouseX, int mouseY) {
@@ -198,6 +197,7 @@ public class UniversalWaystoneScreen extends HandledScreen<ScreenHandler> {
     public void render(MatrixStack matrices, int mouseX, int mouseY, float delta) {
         super.render(matrices, mouseX, mouseY, delta);
         this.drawMouseoverTooltip(matrices, mouseX, mouseY);
+        this.renderButtonTooltips(matrices, mouseX, mouseY);
     }
 
     protected void renderCostItem(MatrixStack matrices, int x, int y) {
